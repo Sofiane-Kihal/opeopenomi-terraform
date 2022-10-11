@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("<NAME>.json")
+  credentials = file("../sa/opeopenomi-dev-c0de98b85b02.json")
 
   project = var.project_id
   region  = var.region
