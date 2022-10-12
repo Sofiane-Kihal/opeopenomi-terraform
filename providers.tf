@@ -5,9 +5,8 @@ terraform {
       version = "4.40.0"
     }
   }
-}
 
-cloud {
+  cloud {
   organization = "opeopenomi"
 
   workspaces {
@@ -15,6 +14,7 @@ cloud {
   }
 }
 
+}
 provider "google" {
   credentials = var.GOOGLE_CREDENTIALS
 
