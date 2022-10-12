@@ -6,6 +6,13 @@ terraform {
     }
   }
 
+  cloud {
+    organization = "opeopenomi"
+    workspaces {
+      name = "gcp-actions-demo"
+    }
+  }
+
 }
 provider "google" {
 
