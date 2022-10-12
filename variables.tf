@@ -11,3 +11,7 @@ variable "region" {
 variable "bucket_location" {
   default = "europe-west1"
 }
+
+variable "GOOGLE_CREDENTIALS" {
+  
+}

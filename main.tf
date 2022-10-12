@@ -8,17 +8,25 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("../sa/opeopenomi-dev-c0de98b85b02.json")
+  credentials = var.GOOGLE_CREDENTIALS
 
   project = var.project_id
   region  = var.region
 }
 
+cloud {
+    organization = "opeopenomi"
+
+    workspaces {
+      name = "gcp-actions-demo"
+    }
+  }
+
 resource "google_storage_bucket" "bucket_2" {
-  name = "test-bucket-opeopenomi-2"
-  location= var.bucket_location
+  name                        = "test-bucket-opeopenomi-2"
+  location                    = var.bucket_location
   uniform_bucket_level_access = true
-  storage_class = "STANDARD"
+  storage_class               = "STANDARD"
   versioning {
     enabled = true
   }
