@@ -14,5 +14,6 @@ variable "bucket_location" {
 
 variable "GOOGLE_CREDENTIALS" {
   type = string
+  default = ""
 
 }
