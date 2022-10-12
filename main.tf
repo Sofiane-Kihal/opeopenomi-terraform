@@ -15,12 +15,12 @@ provider "google" {
 }
 
 cloud {
-    organization = "opeopenomi"
+  organization = "opeopenomi"
 
-    workspaces {
-      name = "gcp-actions-demo"
-    }
+  workspaces {
+    name = "gcp-actions-demo"
   }
+}
 
 resource "google_storage_bucket" "bucket_2" {
   name                        = "test-bucket-opeopenomi-2"
